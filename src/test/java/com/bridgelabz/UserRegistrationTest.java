@@ -30,4 +30,27 @@ public class UserRegistrationTest {
         boolean isFirstnameValid = userRegistration.checkFName("dinesh");
         Assertions.assertFalse(isFirstnameValid);
     }
+    /**
+     * created method testingLastName() to check lastname is valid or not
+     */
+    @Test
+    public void testLastNameValidMustReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        /**
+         * calling Lname method to see LastName is valid
+         */
+        boolean isLnameValid = userRegistration.Lname("Nangare");
+        Assertions.assertTrue(isLnameValid);
+    }
+
+    /**
+     * created method testLastNameInvalidMustReturnFalse for false condition
+     */
+    @Test
+    public void testLastNameValidMustReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean isLnameINValid = userRegistration.Lname("nangare");
+        Assertions.assertFalse(isLnameINValid);
+    }
+
 }
