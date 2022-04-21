@@ -14,7 +14,6 @@ public class UserRegistration {
         return (Lname.matches("[A-Z][a-z]{3,}"));
     }
 
-    //UC3 - adding valid emailID
     public boolean checkEmail(String emailID) {
         return (emailID.matches("^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*[@][0-9A-Za-z]+([.][a-zA-Z]{2,4})*$"));
     }
@@ -22,6 +21,9 @@ public class UserRegistration {
     public boolean checkPhoneNum(String phoneNum) {
         return (phoneNum.matches("91\\s[0-9]{10}"));
 
+    }
+    public boolean checkPassword(String password) {
+        return (password.matches("[a-zA-Z]{8,}"));
     }
 }
 
