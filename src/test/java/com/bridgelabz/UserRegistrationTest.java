@@ -1,5 +1,5 @@
 package com.bridgelabz;
-import com.bridgelabz.UserRegistration;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -74,6 +74,28 @@ public class UserRegistrationTest {
         UserRegistration userRegistration = new UserRegistration();
         boolean isEmailInvalid = userRegistration.checkEmail("almas@.com");
         Assertions.assertFalse(isEmailInvalid);
+    }
+    @Test
+    /**
+     * created testPhoneNumber_MustReturnTrue() for True condition
+     */
+    public void testPhoneNumber_MustReturnTrue() {
+        UserRegistration userRegistration = new UserRegistration();
+        /**
+         * calling checkPhoneNum method to see phoneNumber is valid
+         */
+        boolean isPhoneNumberValid = userRegistration.checkPhoneNum("91 9919819801");
+        Assertions.assertTrue(isPhoneNumberValid);
+    }
+
+    @Test
+    /**
+     * created testPhoneNumber_MustReturnFalse() for False condition
+     */
+    public void testPhoneNumber_MustReturnFalse() {
+        UserRegistration userRegistration = new UserRegistration();
+        boolean isPhoneNumberInValid = userRegistration.checkPhoneNum("9919819801");
+        Assertions.assertFalse(isPhoneNumberInValid);
     }
 
 }
